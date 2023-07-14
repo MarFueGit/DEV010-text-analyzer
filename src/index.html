@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analizador de texto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Analizador de texto</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <div class="analizer-container">
-    <header>
-      <h1>ANALIZADOR DE TEXTO</h1>
-    </header>
-    <nav>
-      <ul class="lista-container">
-        <li data-testid="character-count">Caracteres: 0</li>
-     <li data-testid="character-no-spaces-count">Caracteres sin espacio: 0</li>
-     <li data-testid="word-count">Palabras: 0</li>
-     <li data-testid="number-count">Numeros: 0</li>
-     <li data-testid="number-count">Suma total de numeros: 0</li>
-     <li data-testid="word-length-average">Promedio longitud: 0</li>
-      </ul>
-    </nav>
-    <section>
-      <textarea name="" ></textarea>
-      <div>
-        <button>Limpiar Métricas</button>
-      </div>
-    </section>
-    <footer>
-     <p> Autor : Maricela Fuentes</p>
-    </footer>
-
-  </div>
-  <script src="index.js" type="module"></script>
-</body>
+  <body>
+    <div class="analizer-container">
+      <header>
+        <h1> 📖🔍ANALIZADOR DE TEXTO 🔍📖</h1>
+        <nav>
+          <ul class="lista-container">
+            <li data-testid="character-count">Caracteres: 0</li>
+            <li data-testid="character-no-spaces-count">
+              Caracteres sin espacio: 0
+            </li>
+            <li data-testid="word-count">Palabras: 0</li>
+            <li data-testid="number-count">Numeros: 0</li>
+            <li data-testid="number-sum">Suma total de numeros: 0</li>
+            <li data-testid="word-length-average">Promedio longitud: 0</li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+     <textarea name="text" id="" cols="" rows=""></textarea>
+        <button id="resetButton">Limpiar Métricas</button>
+      </section>
+      <footer>
+        <p>Autor : Maricela Fuentes</p>
+      </footer>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
