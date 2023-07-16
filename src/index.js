@@ -28,6 +28,8 @@ resetButton.addEventListener("click", (e) => {
   caracteres.textContent = "Caracteres: 0";
   caracteresSinEspacio.textContent = "Caracteres sin espacio: 0";
   numeros.textContent = "Numeros: 0";
+  sumaTotalDeNumeros.textContent = "Suma total de numeros: 0";
+  promedioLongitud.textContent = "Promedio longitud: 0";
 });
 // Listener de textarea, usamos Keyup cuando el usuario escriba y levanta el dedo
 textarea.addEventListener("keyup", () => {
@@ -45,7 +47,15 @@ textarea.addEventListener("keyup", () => {
   caracteresSinEspacio.textContent =
     "Caracteres sin espacio: " + cantidadCaracteresSinEspacio;
 
+  // Seteamos la longitud media de palabras encontradas en el texto
+  const mediaLongitud = analyzer.getAverageWordLength(textarea.value)
+  promedioLongitud.textContent = "Promedio longitud: " + mediaLongitud;
+
   // Seteamos la cantidad de numeros encontrados en el texto.
   const cantidadNumeros = analyzer.getNumberCount(textarea.value);
   numeros.textContent = "Numeros: " + cantidadNumeros;
+
+  // Seteamos la suma de los numeros encontrados en el string.
+  const suma = analyzer.getNumberSum(textarea.value);
+  sumaTotalDeNumeros.textContent = "Suma total de numeros: " + suma;
 });

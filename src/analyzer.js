@@ -1,13 +1,12 @@
 const analyzer = {
   getWordCount: (text) => {
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
-
     const palabras = text.trim().split(" ").length;
     return palabras;
   },
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-    const caracteres = text.split("").length;
+    const caracteres = text.trim().split("").length;
     return caracteres;
   },
   getCharacterCountExcludingSpaces: (text) => {
@@ -19,11 +18,18 @@ const analyzer = {
   },
   getAverageWordLength: (text) => {
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+    const palabras = text.trim().split(" ");
+    let sumaLongitudes = 0;
+    for (let i = 0; i < palabras.length; i++) {
+      sumaLongitudes = sumaLongitudes + palabras[i].length;
+    }
+    const media = sumaLongitudes / palabras.length;
+    return media.toFixed(2);
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     // paso 1: Separamos text en un array de caracteres
-    const caracteres = text.split("");
+    const caracteres = text.trim().split("");
     // Paso 2: Con ayuda de filter(), filtramos los caracteres que hagan match con la expresion regular de numeros (/(\d+)/g)
     const numeros = caracteres.filter((caracter) =>
       caracter.match(/(\d+)/g)
