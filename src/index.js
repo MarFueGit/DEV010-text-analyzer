@@ -31,7 +31,7 @@ resetButton.addEventListener("click", (e) => {
   sumaTotalDeNumeros.textContent = "Suma total de numeros: 0";
   promedioLongitud.textContent = "Promedio longitud: 0";
 });
-// Listener de textarea, usamos Keyup cuando el usuario escriba y levanta el dedo
+// Listener de textarea, usamos Keyup cuando el usuario escriba y levanta el dedo de la tecla
 textarea.addEventListener("keyup", () => {
   // Seteamos la cantidad de palabras
   const cantidadPalabras = analyzer.getWordCount(textarea.value);
