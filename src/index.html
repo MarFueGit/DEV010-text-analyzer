@@ -10,26 +10,37 @@
   <body>
     <div class="analizer-container">
       <header>
-        <h1> 📖🔍ANALIZADOR DE TEXTO 🔍📖</h1>
+        <h1>📖🔍ANALIZADOR DE TEXTO 🔍📖</h1>
         <nav>
           <ul class="lista-container">
-            <li class="contadores" data-testid="character-count">Caracteres: 0</li>
+            <li class="contadores" data-testid="character-count">
+              Caracteres: 0
+            </li>
             <li class="contadores" data-testid="character-no-spaces-count">
               Caracteres sin espacio: 0
             </li>
             <li class="contadores" data-testid="word-count">Palabras: 0</li>
             <li class="contadores" data-testid="number-count">Numeros: 0</li>
-            <li class="contadores" data-testid="number-sum">Suma total de numeros: 0</li>
-            <li class="contadores" data-testid="word-length-average">Promedio longitud: 0</li>
+            <li class="contadores" data-testid="number-sum">
+              Suma total de numeros: 0
+            </li>
+            <li class="contadores" data-testid="word-length-average">
+              Promedio longitud: 0
+            </li>
           </ul>
         </nav>
       </header>
       <section class="contenedor-texto">
-     <textarea name="text" id="" cols="" rows="" placeholder="Escribe Aqui:"></textarea>
+        <textarea
+          name="user-input"
+          cols=""
+          rows=""
+          placeholder="Escribe Aqui:"
+        ></textarea>
         <button id="resetButton" value="Limpiar">Limpiar Métricas</button>
       </section>
       <footer>
-        <p>Hecho por :  Maricela Fuentes</p>
+        <p>Hecho por : Maricela Fuentes</p>
       </footer>
     </div>
     <script src="index.js" type="module"></script>
