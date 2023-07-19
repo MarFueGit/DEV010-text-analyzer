@@ -20,8 +20,8 @@ const analyzer = {
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
     const palabras = text.trim().split(" ");
     let sumaLongitudes = 0;
-    for (const palabra of palabras) {
-      sumaLongitudes = sumaLongitudes + palabra.length;
+    for (let i = 0; i < palabras.length; i++) {
+      sumaLongitudes = sumaLongitudes + palabras[i].length;
     }
     const media = sumaLongitudes / palabras.length;
     return Number(media.toFixed(2));

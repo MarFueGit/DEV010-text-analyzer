@@ -4,7 +4,7 @@ import analyzer from "./analyzer.js";
 const resetButton = document.getElementById("resetButton");
 
 // Declaramos una variable haciendo referencia a la caja textarea,
-const textarea = document.getElementsByName("text")[0];
+const textarea = document.getElementsByName("user-input")[0];
 
 // Dclaramos una variable que hace referencia al li de cantidad de caracteres, accdediendo a el
 // por medio de su attibuto data-tesid=chacarcter-count
@@ -48,7 +48,7 @@ textarea.addEventListener("keyup", () => {
     "Caracteres sin espacio: " + cantidadCaracteresSinEspacio;
 
   // Seteamos la longitud media de palabras encontradas en el texto
-  const mediaLongitud = analyzer.getAverageWordLength(textarea.value)
+  const mediaLongitud = analyzer.getAverageWordLength(textarea.value);
   promedioLongitud.textContent = "Promedio longitud: " + mediaLongitud;
 
   // Seteamos la cantidad de numeros encontrados en el texto.
