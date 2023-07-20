@@ -1,7 +1,7 @@
 import analyzer from "./analyzer.js";
 
 // Declaramos uns variable boton que hace referencia al boton para limpiar la textarea
-const resetButton = document.getElementById("resetButton");
+const resetButton = document.getElementById("reset-button");
 
 // Declaramos una variable haciendo referencia a la caja textarea,
 const textarea = document.getElementsByName("user-input")[0];

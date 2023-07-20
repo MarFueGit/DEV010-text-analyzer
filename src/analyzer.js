@@ -34,7 +34,7 @@ const analyzer = {
     //  si es verdadera incrementamos en 1 nuestro contador.
     let cantidadNumeros = 0;
     for (const palabra of palabras) {
-      if (!isNaN(palabra)) {
+      if (!isNaN(Number(palabra))) {
         cantidadNumeros++;
       }
     }
